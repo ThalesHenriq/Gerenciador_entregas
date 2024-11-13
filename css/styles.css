@@ -1,0 +1,130 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d6d6d6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header .icon {
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
+    padding: 30px;
+
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 100px;
+    color: #444;
+    font-size: 24px;
+}
+
+/* Formulários */
+.delivery-form, .reset-form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Labels e Inputs */
+label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Botões */
+button {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+.btn-reset {
+    background-color: #f44336;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-reset:hover {
+    background-color: #e41f1f;
+}
+
+/* Botões de navegação */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-nav {
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    width: 48%;
+    transition: background 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: #45a049;
+}
+
+/* Rodapé */
+.footer-container {
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-container span {
+    color: #333;
+    font-weight: bold;
+}
