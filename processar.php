@@ -72,18 +72,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['action'])) {
             'quantidade' => $quantidade,
             'status' => $status,
             'endereco' => $endereco,
-            'lat' => null, // Inicializar para coordenadas
+            'lat' => null, 
             'lng' => null
         );
 
-        // Obter coordenadas
         $coords = get_coordinates($endereco);
         if ($coords) {
             $dados['lat'] = $coords['lat'];
             $dados['lng'] = $coords['lng'];
         }
 
-        // Adiciona a nova entrega e grava no arquivo JSON
         $entregas[] = $dados;
         file_put_contents($file, json_encode($entregas, JSON_PRETTY_PRINT));
     }
@@ -97,7 +95,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['action'])) {
 $partida_lat = -23.5505;
 $partida_lng = -46.6333;
 
-// Verificar se há entregas e calcular a distância
 if (!empty($entregas)) {
     foreach ($entregas as &$entrega) {
         if (isset($entrega['lat']) && isset($entrega['lng'])) {
@@ -108,14 +105,13 @@ if (!empty($entregas)) {
         }
     }
 
-    // Ordenar por distância (mais próxima para mais distante)
     usort($entregas, function($a, $b) {
         if ($a['distancia'] === null) return 1;
         if ($b['distancia'] === null) return -1;
         return $a['distancia'] <=> $b['distancia'];
     });
     
-    // Exibir entregas
+
     echo "<table>";
     echo "<tr><th>Nome</th><th>Quantidade</th><th>Status</th><th>Endereço</th></tr>";
     foreach ($entregas as $entrega) {
