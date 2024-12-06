@@ -1,11 +1,9 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -16,7 +14,6 @@ body {
     min-height: 100vh;
 }
 
-/* Cabeçalho com ícone e título */
 .header {
     display: flex;
     align-items: center;
@@ -36,7 +33,6 @@ body {
     color: #444;
 }
 
-/* Container para o conteúdo principal */
 .container {
     max-width: 800px;
     width: 100%;
@@ -47,7 +43,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -69,7 +64,6 @@ table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Botões */
 .buttons {
     display: flex;
     justify-content: center;
@@ -92,7 +86,6 @@ table tr:nth-child(even) {
     background-color: #45a049;
 }
 
-/* Rodapé */
 .footer-container {
     margin-top: 20px;
     color: #666;
