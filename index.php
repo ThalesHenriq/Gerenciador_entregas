@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="header">
-    <img src="img/icon.png" alt="Ícone" class="icon"> <!-- Altere para o caminho do seu ícone -->
+    <img src="img/icone.png" alt="Ícone" class="icon"> 
 </div>
 
     <div class="container">
